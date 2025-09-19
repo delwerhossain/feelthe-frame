@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Syne, Poppins } from "next/font/google";
+import { Poppins, Syne } from "next/font/google";
 import "./globals.css";
 
 const syne = Syne({
@@ -16,7 +16,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Feel The Frame - Professional Video Production",
-  description: "Experience premium video production services. From concept to creation, we optimize your marketing with video content that drives results.",
+  description:
+    "Experience premium video production services. From concept to creation, we optimize your marketing with video content that drives results.",
 };
 
 export default function RootLayout({
@@ -26,9 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body
-        className={`${syne.variable} ${poppins.variable} antialiased dark`}
-      >
+      <body className={`${syne.variable} ${poppins.variable} antialiased dark`}>
         {children}
       </body>
     </html>

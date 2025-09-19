@@ -41,7 +41,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  
+
   /* Feel The Frame Custom Colors */
   --color-brand: var(--brand);
   --color-brand-light: var(--brand-light);
@@ -57,7 +57,7 @@
 
 :root {
   --radius: 0.625rem;
-  
+
   /* Feel The Frame Color System - Light Mode (fallback) */
   --background: #ffffff;
   --foreground: #111827;
@@ -65,83 +65,83 @@
   --card-foreground: #111827;
   --popover: #ffffff;
   --popover-foreground: #111827;
-  --primary: #6320EE;
+  --primary: #6320ee;
   --primary-foreground: #ffffff;
   --secondary: #f3f4f6;
   --secondary-foreground: #111827;
   --muted: #f9fafb;
   --muted-foreground: #6b7280;
-  --accent: #8B5CF6;
+  --accent: #8b5cf6;
   --accent-foreground: #ffffff;
   --destructive: #ef4444;
   --border: #e5e7eb;
   --input: #e5e7eb;
-  --ring: #6320EE;
-  
+  --ring: #6320ee;
+
   /* Feel The Frame Brand Colors */
-  --brand: #6320EE;
-  --brand-light: #8B5CF6;
-  --brand-dark: #4C1D95;
-  --brand-darker: #3B1A78;
-  --midnight: #211A1D;
-  --midnight-light: #2A2128;
+  --brand: #6320ee;
+  --brand-light: #8b5cf6;
+  --brand-dark: #4c1d95;
+  --brand-darker: #3b1a78;
+  --midnight: #211a1d;
+  --midnight-light: #2a2128;
   --text-strong: rgba(255, 255, 255, 0.92);
   --text-muted: rgba(255, 255, 255, 0.72);
   --text-subtle: rgba(255, 255, 255, 0.56);
   --dividers: rgba(255, 255, 255, 0.08);
-  
+
   /* Chart colors with purple theme */
-  --chart-1: #6320EE;
-  --chart-2: #8B5CF6;
-  --chart-3: #4C1D95;
-  --chart-4: #A78BFA;
-  --chart-5: #C4B5FD;
-  
+  --chart-1: #6320ee;
+  --chart-2: #8b5cf6;
+  --chart-3: #4c1d95;
+  --chart-4: #a78bfa;
+  --chart-5: #c4b5fd;
+
   /* Sidebar colors */
   --sidebar: #ffffff;
   --sidebar-foreground: #111827;
-  --sidebar-primary: #6320EE;
+  --sidebar-primary: #6320ee;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #f3f4f6;
   --sidebar-accent-foreground: #111827;
   --sidebar-border: #e5e7eb;
-  --sidebar-ring: #6320EE;
+  --sidebar-ring: #6320ee;
 }
 
 .dark {
   /* Feel The Frame Dark Theme */
-  --background: #211A1D;
+  --background: #211a1d;
   --foreground: rgba(255, 255, 255, 0.92);
-  --card: #2A2128;
+  --card: #2a2128;
   --card-foreground: rgba(255, 255, 255, 0.92);
-  --popover: #2A2128;
+  --popover: #2a2128;
   --popover-foreground: rgba(255, 255, 255, 0.92);
-  --primary: #6320EE;
+  --primary: #6320ee;
   --primary-foreground: #ffffff;
-  --secondary: #2A2128;
+  --secondary: #2a2128;
   --secondary-foreground: rgba(255, 255, 255, 0.92);
-  --muted: #2A2128;
+  --muted: #2a2128;
   --muted-foreground: rgba(255, 255, 255, 0.72);
-  --accent: #8B5CF6;
+  --accent: #8b5cf6;
   --accent-foreground: #ffffff;
   --destructive: #ef4444;
   --border: rgba(255, 255, 255, 0.08);
   --input: rgba(255, 255, 255, 0.08);
   --ring: rgba(99, 32, 238, 0.24);
-  
+
   /* Dark mode chart colors */
-  --chart-1: #6320EE;
-  --chart-2: #8B5CF6;
-  --chart-3: #A78BFA;
-  --chart-4: #C4B5FD;
-  --chart-5: #DDD6FE;
-  
+  --chart-1: #6320ee;
+  --chart-2: #8b5cf6;
+  --chart-3: #a78bfa;
+  --chart-4: #c4b5fd;
+  --chart-5: #ddd6fe;
+
   /* Dark sidebar colors */
-  --sidebar: #2A2128;
+  --sidebar: #2a2128;
   --sidebar-foreground: rgba(255, 255, 255, 0.92);
-  --sidebar-primary: #6320EE;
+  --sidebar-primary: #6320ee;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #211A1D;
+  --sidebar-accent: #211a1d;
   --sidebar-accent-foreground: rgba(255, 255, 255, 0.92);
   --sidebar-border: rgba(255, 255, 255, 0.08);
   --sidebar-ring: rgba(99, 32, 238, 0.24);
@@ -154,7 +154,12 @@
   body {
     @apply bg-background text-foreground font-sans;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-display;
   }
 }
@@ -162,57 +167,66 @@
 /* Feel The Frame Gradient Utilities */
 @layer utilities {
   .gradient-hero {
-    background: linear-gradient(135deg, #6320EE 0%, #8B5CF6 100%);
+    background: linear-gradient(135deg, #6320ee 0%, #8b5cf6 100%);
   }
-  
+
   .gradient-section {
-    background: linear-gradient(180deg, #111827 0%, #211A1D 100%);
+    background: linear-gradient(180deg, #111827 0%, #211a1d 100%);
     position: relative;
   }
-  
+
   .gradient-section::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 0% 0%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 100% 100%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+    background:
+      radial-gradient(
+        circle at 0% 0%,
+        rgba(139, 92, 246, 0.1) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 100% 100%,
+        rgba(139, 92, 246, 0.1) 0%,
+        transparent 50%
+      );
     pointer-events: none;
   }
-  
+
   .gradient-cta-glow {
     position: relative;
   }
-  
+
   .gradient-cta-glow::before {
-    content: '';
+    content: "";
     position: absolute;
     top: -2px;
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: radial-gradient(circle, #8B5CF6 0%, transparent 70%);
+    background: radial-gradient(circle, #8b5cf6 0%, transparent 70%);
     border-radius: inherit;
     z-index: -1;
     filter: blur(8px);
     opacity: 0.6;
   }
-  
+
   .text-gradient {
-    background: linear-gradient(135deg, #6320EE 0%, #8B5CF6 100%);
+    background: linear-gradient(135deg, #6320ee 0%, #8b5cf6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
+
   .bg-glass {
     background: rgba(255, 255, 255, 0.02);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.08);
   }
-  
+
   .border-brand {
     border-color: rgba(99, 32, 238, 0.24);
   }

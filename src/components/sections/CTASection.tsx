@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 interface CTASectionProps {
   onScrollToSection: (id: string) => void;
@@ -18,12 +18,13 @@ export default function CTASection({ onScrollToSection }: CTASectionProps) {
               Creative Ideas Deserve The Right Team
             </h2>
             <p className="text-white/72 text-lg mb-8 max-w-2xl mx-auto">
-              Ready to transform your vision into compelling video content? Let's create something amazing together.
+              Ready to transform your vision into compelling video content?
+              Let's create something amazing together.
             </p>
             <Button
               size="lg"
               className="gradient-cta-glow bg-brand hover:bg-brand-light text-white rounded-full"
-              onClick={() => onScrollToSection('contact')}
+              onClick={() => onScrollToSection("contact")}
             >
               Get Started Today
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -32,5 +33,5 @@ export default function CTASection({ onScrollToSection }: CTASectionProps) {
         </Card>
       </div>
     </section>
-  )
+  );
 }

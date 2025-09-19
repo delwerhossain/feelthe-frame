@@ -1,44 +1,57 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const workProjects = [
   {
     title: "Brand Storytelling",
     description: "Authentic narratives that connect with your audience",
-    image: "/assets/Portfolio Video Thumbnails/brand-story.jpg"
+    image: "/assets/Portfolio Video Thumbnails/brand-story.jpg",
   },
   {
     title: "Product Showcase",
     description: "Dynamic product demonstrations that convert",
-    image: "/assets/Portfolio Video Thumbnails/product-demo.jpg"
+    image: "/assets/Portfolio Video Thumbnails/product-demo.jpg",
   },
   {
     title: "Corporate Content",
     description: "Professional videos that build trust and authority",
-    image: "/assets/Portfolio Video Thumbnails/corporate.jpg"
-  }
-]
+    image: "/assets/Portfolio Video Thumbnails/corporate.jpg",
+  },
+];
 
 export default function WorkSection() {
   return (
-    <section id="work" className="py-24 bg-gradient-to-b from-white/5 to-brand/5 rounded-t-[32px]">
+    <section
+      id="work"
+      className="py-24 bg-gradient-to-b from-white/5 to-brand/5 rounded-t-[32px]"
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-display font-bold text-white text-4xl md:text-5xl mb-4">
             Our Work
           </h2>
           <p className="text-white/72 text-lg max-w-2xl mx-auto">
-            Discover our portfolio of compelling video content that drives results for businesses across industries.
+            Discover our portfolio of compelling video content that drives
+            results for businesses across industries.
           </p>
         </div>
 
         <Carousel className="w-full" opts={{ align: "start", loop: true }}>
           <CarouselContent className="gap-6">
             {workProjects.map((project, index) => (
-              <CarouselItem key={index} className="basis-full md:basis-1/2 lg:basis-1/3">
+              <CarouselItem
+                key={index}
+                className="basis-full md:basis-1/2 lg:basis-1/3"
+              >
                 <Card className="group relative overflow-hidden rounded-[28px] bg-midnight-light border border-white/8 hover:border-brand/24 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-brand/20">
                   <div className="aspect-video relative overflow-hidden">
                     <div className="w-full h-full bg-gradient-to-br from-brand to-brand-light"></div>
@@ -71,5 +84,5 @@ export default function WorkSection() {
         </Carousel>
       </div>
     </section>
-  )
+  );
 }

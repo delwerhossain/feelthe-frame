@@ -1,21 +1,33 @@
-"use client"
+"use client";
 
-import { Card, CardContent } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
-import { Mail, Phone, MapPin, Instagram, Youtube, Linkedin } from "lucide-react"
+import {
+  Instagram,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  Youtube,
+} from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 
 interface FooterProps {
   onScrollToSection: (id: string) => void;
 }
 
 export default function Footer({ onScrollToSection }: FooterProps) {
-  const quickLinks = ['Our Story', 'Our Work', 'Services', 'Process']
-  const services = ['Video Editing', 'Filming', 'Full Production', 'Social Media']
+  const quickLinks = ["Our Story", "Our Work", "Services", "Process"];
+  const services = [
+    "Video Editing",
+    "Filming",
+    "Full Production",
+    "Social Media",
+  ];
   const socialLinks = [
     { icon: Instagram, href: "#" },
     { icon: Youtube, href: "#" },
-    { icon: Linkedin, href: "#" }
-  ]
+    { icon: Linkedin, href: "#" },
+  ];
 
   return (
     <footer id="contact" className="bg-gray-900 py-16">
@@ -24,7 +36,9 @@ export default function Footer({ onScrollToSection }: FooterProps) {
           {/* Contact Info */}
           <Card className="bg-midnight-light border border-white/8 rounded-[16px] p-6">
             <CardContent className="p-0">
-              <h3 className="font-display font-semibold text-white text-lg mb-4">Contact</h3>
+              <h3 className="font-display font-semibold text-white text-lg mb-4">
+                Contact
+              </h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-white/72">
                   <Mail className="h-4 w-4" />
@@ -45,12 +59,16 @@ export default function Footer({ onScrollToSection }: FooterProps) {
           {/* Quick Links */}
           <Card className="bg-midnight-light border border-white/8 rounded-[16px] p-6">
             <CardContent className="p-0">
-              <h3 className="font-display font-semibold text-white text-lg mb-4">Quick Links</h3>
+              <h3 className="font-display font-semibold text-white text-lg mb-4">
+                Quick Links
+              </h3>
               <div className="space-y-3">
                 {quickLinks.map((link) => (
                   <button
                     key={link}
-                    onClick={() => onScrollToSection(link.toLowerCase().replace(' ', ''))}
+                    onClick={() =>
+                      onScrollToSection(link.toLowerCase().replace(" ", ""))
+                    }
                     className="block text-white/72 hover:text-brand transition-colors text-sm"
                   >
                     {link}
@@ -63,7 +81,9 @@ export default function Footer({ onScrollToSection }: FooterProps) {
           {/* Services */}
           <Card className="bg-midnight-light border border-white/8 rounded-[16px] p-6">
             <CardContent className="p-0">
-              <h3 className="font-display font-semibold text-white text-lg mb-4">Services</h3>
+              <h3 className="font-display font-semibold text-white text-lg mb-4">
+                Services
+              </h3>
               <div className="space-y-3">
                 {services.map((service) => (
                   <div key={service} className="text-white/72 text-sm">
@@ -76,7 +96,11 @@ export default function Footer({ onScrollToSection }: FooterProps) {
 
               <div className="flex gap-4">
                 {socialLinks.map(({ icon: Icon, href }, index) => (
-                  <a key={index} href={href} className="text-white/72 hover:text-brand transition-colors">
+                  <a
+                    key={index}
+                    href={href}
+                    className="text-white/72 hover:text-brand transition-colors"
+                  >
                     <Icon className="h-4 w-4" />
                   </a>
                 ))}
@@ -92,5 +116,5 @@ export default function Footer({ onScrollToSection }: FooterProps) {
         </div>
       </div>
     </footer>
-  )
+  );
 }

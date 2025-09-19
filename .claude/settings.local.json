@@ -83,7 +83,10 @@
       "mcp__filesystem__write_file",
       "mcp__filesystem__edit_file",
       "mcp__shadcn__list_components",
-      "mcp__shadcn__get_component"
+      "mcp__shadcn__get_component",
+      "Bash(pnpm typecheck:*)",
+      "Read(//e/test/other/ai/feeltheframe/src/app/**)",
+      "Read(//e/test/other/ai/feeltheframe/src/components/**)"
     ],
     "deny": [],
     "ask": [],
